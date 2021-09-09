@@ -12,14 +12,13 @@ const App = () => {
 
     const getWeatherData = async (lat, lon) => {
         
-        // const key = process.env.REACT_APP_WEATHER_API_KEY
+        const key = process.env.REACT_APP_WEATHER_API_KEY
 
         const lang = navigator.language.split("-")[0]; 
         console.log(lang)
         try {
-            const { data }= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c700963058c7edd7376ada4312315048&lang=${lang}&units=metric`);
+            const { data }= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&lang=${lang}&units=metric`);
             setWheather(data);
-            console.log({data})
         } catch {
             alert("veri alınırken bir hata oluştu.")
         }
