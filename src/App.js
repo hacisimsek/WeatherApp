@@ -12,7 +12,7 @@ const App = () => {
 
     const getWeatherData = async (lat, lon) => {
         
-        const key = process.env.REACT_APP_WEATHER_API_KEY
+        // const key = process.env.REACT_APP_WEATHER_API_KEY
 
         const lang = navigator.language.split("-")[0]; 
         console.log(lang)
